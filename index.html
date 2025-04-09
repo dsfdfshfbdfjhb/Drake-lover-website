@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My First Website</title>
+  <meta charset="UTF-8">
+  <title>Krunker.io Tab Opener</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    input {
+      width: 60px;
+      padding: 8px;
+      font-size: 16px;
+      text-align: center;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>This is my first website on GitHub Pages!</p>
+  <h1>Krunker.io Tab Opener</h1>
+  <input type="number" id="tabCount" value="1">
+  <button onclick="openTabs()">Open Tabs</button>
+
+  <script>
+    function openTabs() {
+      const count = parseInt(document.getElementById('tabCount').value);
+      const url = "https://krunker.io/";
+      for (let i = 0; i < count; i++) {
+        window.open(url, '_blank');
+      }
+    }
+  </script>
 </body>
 </html>
